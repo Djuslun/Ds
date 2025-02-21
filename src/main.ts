@@ -1,3 +1,3 @@
-import './assets/main.scss';
+import './assets/main.css';
 
 export * from './components';
