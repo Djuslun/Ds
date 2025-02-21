@@ -33,18 +33,14 @@ case $CHOICE in
     ;;
 esac
 
+# Step 1: Building project
 echo "Building project..."
 npm run build
 
-# Step 1: Increase the npm package version
+# Step 2: Increase the npm package version
 echo "Increasing npm package version ($VERSION_TYPE)..."
 VERSION=$(npm version $VERSION_TYPE)  # Use the selected version type
 echo "New version: $VERSION"
-
-# Step 2: Commit the version change
-echo "Committing version change..."
-git add package.json package-lock.json  # Add version files
-git commit -m "Bump version to $VERSION"
 
 # Step 3: Push the commit to the current branch
 CURRENT_BRANCH=$(git branch --show-current)
