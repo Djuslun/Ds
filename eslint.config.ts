@@ -20,7 +20,7 @@ export default defineConfigWithVueTs(
   },
   { languageOptions: { globals: globals.browser } },
 
-  pluginVue.configs['flat/recommended'],
+  pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
 
   {

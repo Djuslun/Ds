@@ -33,6 +33,9 @@ case $CHOICE in
     ;;
 esac
 
+echo "Building project..."
+npm run build
+
 # Step 1: Increase the npm package version
 echo "Increasing npm package version ($VERSION_TYPE)..."
 VERSION=$(npm version $VERSION_TYPE)  # Use the selected version type
