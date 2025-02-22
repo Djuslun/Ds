@@ -9,6 +9,8 @@
     "eslint.config.*"
   ],
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "dist/types",
     "noEmit": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
 
