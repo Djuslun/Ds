@@ -3,7 +3,10 @@
   "main": "./dist/index.js",
   "version": "0.0.5",
   "files": [
-    "dist"
+    "dist",
+    "src",
+    ".prettierrc.json",
+    "eslint.config.ts"
   ],
   "types": "./dist/index.d.ts",
   "publishConfig": {

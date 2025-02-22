@@ -15,8 +15,8 @@ export default defineConfig({
     dts({
       insertTypesEntry: true,
       rollupTypes: true,
-      include: ['src/**/*', 'src/**/*.ts', 'src/**/*.vue', 'src/vue.d.ts'], // Включить все файлы в src
-      exclude: ['**/*.stories.ts', '**/*.test.ts'], // Исключить тесты и истории,
+      include: ['src/**/*', 'src/**/*.ts', 'src/**/*.vue', 'src/vue.d.ts'],
+      exclude: ['**/*.stories.ts', '**/*.test.ts'],
       compilerOptions: {
         types: ['vue'],
       },
