@@ -1,8 +1,10 @@
 {
   "name": "@djuslun/ds",
   "main": "./dist/ds.js",
-  "version": "0.0.3",
-  "files": ["dist"],
+  "version": "0.0.4",
+  "files": [
+    "dist"
+  ],
   "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public"
