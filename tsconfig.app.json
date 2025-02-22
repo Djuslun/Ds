@@ -1,14 +1,35 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "eslint.config.ts"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "eslint.config.ts", "src/vue.d.ts"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "strict": true,
+    "noImplicitThis": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "isolatedModules": true,
+    "noImplicitAny": false,
+    "verbatimModuleSyntax": true,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-
+    "lib": ["es5", "es6", "esnext", "dom", "dom.iterable", "scripthost"],
     "paths": {
       "@/*": ["./src/*"]
     },
 
-    "types": [ "vite/client", "vue"]
+    "noEmit": true,
+
+    "moduleResolution": "Bundler",
+    "declaration": true,
+    "outDir": "dist",
+    "allowJs": true,
+
+    "types": [ "vite/client", "vue", "node"]
   }
 }

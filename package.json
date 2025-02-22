@@ -1,6 +1,6 @@
 {
   "name": "@djuslun/ds",
-  "main": "./dist/ds.js",
+  "main": "./dist/index.js",
   "version": "0.0.4",
   "files": [
     "dist"
@@ -8,6 +8,10 @@
   "types": "./dist/index.d.ts",
   "publishConfig": {
     "access": "public"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./style.css": "./dist/main.css"
   },
   "type": "module",
   "scripts": {

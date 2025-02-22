@@ -8,7 +8,21 @@ import dts from 'vite-plugin-dts';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueDevTools(), tsconfigPaths(), dts()],
+  plugins: [
+    vue(),
+    vueDevTools(),
+    tsconfigPaths(),
+    dts({
+      insertTypesEntry: true,
+      rollupTypes: true,
+      include: ['src/**/*', 'src/**/*.ts', 'src/**/*.vue', 'src/vue.d.ts'], // Включить все файлы в src
+      exclude: ['**/*.stories.ts', '**/*.test.ts'], // Исключить тесты и истории,
+      compilerOptions: {
+        types: ['vue'],
+      },
+      tsconfigPath: './tsconfig.app.json',
+    }),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
@@ -24,9 +38,10 @@ export default defineConfig({
   build: {
     cssCodeSplit: true,
     lib: {
-      entry: resolve(__dirname, 'src/main.ts'),
+      entry: resolve(__dirname, 'src/index.ts'),
       name: '@djuslun/ds',
-      formats: ['es'],
+      fileName: 'index',
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['vue'],
