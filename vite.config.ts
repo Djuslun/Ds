@@ -34,7 +34,9 @@ export default defineConfig({
         additionalData: `
           @use "sass:math";
           @use "reset-css";
-          @use "@/assets/scss" as *;
+          @use "@/assets/scss/_colors.scss" as *;
+          @use "@/assets/scss/_mixins.scss" as *;
+          @use "@/assets/scss/_variables.scss" as *;
         `,
       },
     },
