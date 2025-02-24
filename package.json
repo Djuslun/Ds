@@ -6,7 +6,8 @@
     "dist",
     "src",
     ".prettierrc.json",
-    "eslint.config.ts"
+    "eslint.config.ts",
+    "src/scss"
   ],
   "types": "./dist/index.d.ts",
   "publishConfig": {
@@ -14,7 +15,7 @@
   },
   "exports": {
     ".": "./dist/index.js",
-    "./style.css": "./dist/main.css"
+    "./scss": "./src/scss/index.scss"
   },
   "type": "module",
   "scripts": {

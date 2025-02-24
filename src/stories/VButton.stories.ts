@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 
-import Button from '@/components/Buttons/VButton.vue';
+import VButton from '@/components/Buttons/VButton.vue';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-  title: 'Lib/Button',
-  component: Button,
+  title: 'Lib/VButton',
+  component: VButton,
   // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   argTypes: {},
   args: {},
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof VButton>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

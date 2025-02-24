@@ -31,7 +31,11 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "reset-css";`,
+        additionalData: `
+          @use "sass:math";
+          @use "reset-css";
+          @use "@/assets/scss" as *;
+        `,
       },
     },
   },
@@ -45,6 +49,10 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['vue'],
+      output: {
+        preserveModules: true,
+        assetFileNames: 'styles/[name][extname]',
+      },
     },
   },
 });

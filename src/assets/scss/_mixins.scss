@@ -1,0 +1,17 @@
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin font-regular($font-size: 16px, $line-height: 20px) {
+  font-weight: 400;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin gradient-border-with-radius($bg, $gradient, $width, $radius) {
+  background: linear-gradient($bg,$bg) padding-box,
+              $gradient border-box;
+  border: $width solid transparent;
+  border-radius: $radius;
+}
