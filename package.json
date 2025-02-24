@@ -15,8 +15,7 @@
   },
   "exports": {
     ".": "./dist/index.js",
-    "./scss": "./dist/styles/assets/scss/index.css",
-    "./scss/*": "./src/scss/*"
+    "./scss": "./src/assets/scss/index.scss"
   },
   "type": "module",
   "scripts": {
