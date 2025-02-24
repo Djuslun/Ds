@@ -5,6 +5,7 @@ import vueDevTools from 'vite-plugin-vue-devtools';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     tsconfigPaths(),
+    libInjectCss(),
     dts({
       insertTypesEntry: true,
       rollupTypes: true,
@@ -54,6 +56,9 @@ export default defineConfig({
       output: {
         preserveModules: true,
         assetFileNames: 'styles/[name][extname]',
+        globals: {
+          vue: 'Vue',
+        },
       },
     },
   },
