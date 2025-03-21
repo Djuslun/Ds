@@ -37,10 +37,7 @@ export default defineConfig({
       scss: {
         additionalData: `
           @use "sass:math";
-          @use "@/assets/scss/_base.scss" as *;
-          @use "@/assets/scss/_colors.scss" as *;
           @use "@/assets/scss/_mixins.scss" as *;
-          @use "@/assets/scss/_variables.scss" as *;
         `,
       },
     },
