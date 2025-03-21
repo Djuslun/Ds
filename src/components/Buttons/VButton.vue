@@ -7,8 +7,14 @@
 </template>
 
 <script setup lang="ts">
+import type { TSlot } from '@/types';
+
 defineProps<{
   label?: string;
+}>();
+
+defineSlots<{
+  default(): TSlot;
 }>();
 </script>
 
