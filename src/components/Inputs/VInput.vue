@@ -22,7 +22,7 @@ const model = defineModel<string>();
 
 <style lang="scss" scoped>
 .v-input {
-  border: 1px solid $main;
+  border: 1px solid var(--main);
   border-radius: 4px;
   padding: 4px 8px;
 }

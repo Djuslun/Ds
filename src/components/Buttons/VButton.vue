@@ -1,21 +1,32 @@
 <template>
-  <button class="v-button">{{ label }}</button>
+  <button class="v-button">
+    {{ label }}
+
+    <slot v-if="!label" />
+  </button>
 </template>
 
 <script setup lang="ts">
 defineProps<{
-  label: string;
+  label?: string;
 }>();
 </script>
 
 <style scoped lang="scss">
 .v-button {
-  $gradient: linear-gradient(to right, #dc2d8c, #1976ed);
   @include font-regular();
-  @include gradient-border-with-radius($main, $gradient, 2px, 8px);
 
-  padding: 4px 12px;
-  color: $text;
+  background: var(--bg-control);
+  border-radius: 8px;
+  padding: 8px;
+  color: var(--text);
   cursor: pointer;
+  border: 1px solid var(--border);
+  box-shadow: var(--border-box-shadow);
+  transition: all 0.3s;
+
+  &:hover {
+    background: var(--button-hover);
+  }
 }
 </style>

@@ -12,5 +12,11 @@ const config: StorybookConfig = {
     name: '@storybook/vue3-vite',
     options: {},
   },
+  viteFinal: async (config) => {
+    config.optimizeDeps = {
+      include: ['vue3-icon', '@mdi/js'],
+    };
+    return config;
+  },
 };
 export default config;
